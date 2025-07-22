@@ -53,12 +53,12 @@ require("lazy").setup({
 {'neovim/nvim-lspconfig'},
 --Theme
 {'joshdick/onedark.vim'},
-
 --Autocomplite
 {'hrsh7th/cmp-nvim-lsp'}, {'hrsh7th/cmp-buffer'}, {'hrsh7th/cmp-path'},
     {'hrsh7th/cmp-cmdline'}, {'hrsh7th/nvim-cmp'},
-
 },
+--Somenew
+
   -- Configure any other settings here. See the documentation for more details.
   -- colorscheme that will be used when installing plugins.
   -- install = { colorscheme = { "habamax" } },
