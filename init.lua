@@ -8,4 +8,4 @@ require('plugins.treesitter')
 require('plugins.lsp')
 require('plugins.neotree')
 require('plugins.cmp')
-
+--require('plugins.mason')

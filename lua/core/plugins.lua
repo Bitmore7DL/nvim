@@ -41,23 +41,44 @@ require("lazy").setup({
     -- {"3rd/image.nvim", opts = {}},
     -- OR use snacks.nvim's image module:
     -- "folke/snacks.nvim",
-  },
-  lazy = false, -- neo-tree will lazily load itself
-  ---@module "neo-tree"
-  ---@type neotree.Config?
-  opts = {
-    -- add options here
-  },
-},
---LSP
+                     },
+    lazy = false, -- neo-tree will lazily load itself
+    ---@module "neo-tree"
+    ---@type neotree.Config?
+    opts = {
+      -- add options here
+           }
+    },
+--LSP:
 {'neovim/nvim-lspconfig'},
 --Theme
-{'joshdick/onedark.vim'},
---Autocomplite
-{'hrsh7th/cmp-nvim-lsp'}, {'hrsh7th/cmp-buffer'}, {'hrsh7th/cmp-path'},
-    {'hrsh7th/cmp-cmdline'}, {'hrsh7th/nvim-cmp'},
+{'joshdick/onedark.vim'}, 
+--Autocomplite CMP
+{'hrsh7th/cmp-nvim-lsp'},
+{'hrsh7th/cmp-buffer'}, 
+{'hrsh7th/cmp-path'},
+{'hrsh7th/cmp-cmdline'}, 
+{'hrsh7th/nvim-cmp'},
 },
---Somenew
+--Mason
+-- LSP Package Manager
+		{
+			"williamboman/mason.nvim",
+			Build = ":MasonUpdate",
+		},
+		{
+			"jay-babu/mason-null-ls.nvim",
+			event = { "BufReadPre", "BufNewFile" },
+			dependencies = {
+				"williamboman/mason.nvim",
+				"nvimtools/none-ls.nvim",
+			},
+		},
+
+		{
+			"williamboman/mason-lspconfig.nvim",
+		},  
+
 
   -- Configure any other settings here. See the documentation for more details.
   -- colorscheme that will be used when installing plugins.
