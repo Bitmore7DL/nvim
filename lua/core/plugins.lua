@@ -59,7 +59,6 @@ require("lazy").setup({
 {'hrsh7th/cmp-path'},
 {'hrsh7th/cmp-cmdline'}, 
 {'hrsh7th/nvim-cmp'},
-},
 --Mason
 -- LSP Package Manager
 		{
@@ -78,8 +77,15 @@ require("lazy").setup({
 		{
 			"williamboman/mason-lspconfig.nvim",
 		},  
-
-
+--Telescope
+    {
+    'nvim-telescope/telescope.nvim',
+    tag = '0.1.8',
+    dependencies = { 'nvim-lua/plenary.nvim' }
+    },
+--Null-ls
+    {'jose-elias-alvarez/null-ls.nvim'},
+},
   -- Configure any other settings here. See the documentation for more details.
   -- colorscheme that will be used when installing plugins.
   -- install = { colorscheme = { "habamax" } },
