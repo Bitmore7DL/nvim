@@ -51,14 +51,20 @@ require("lazy").setup({
     },
 --LSP:
 {'neovim/nvim-lspconfig'},
+-- LSP: Snippets
+{"L3MON4D3/LuaSnip","saadparwaiz1/cmp_luasnip",},
+{ 
+"hrsh7th/nvim-cmp",
+"hrsh7th/vim-vsnip",
+"hrsh7th/vim-vsnip-integ",
+"hrsh7th/cmp-vsnip",
+"hrsh7th/cmp-nvim-lsp",
+"hrsh7th/cmp-buffer",
+"hrsh7th/cmp-path",
+"hrsh7th/cmp-cmdline",
+},
 --Theme
 {'joshdick/onedark.vim'}, 
---Autocomplite CMP
-{'hrsh7th/cmp-nvim-lsp'},
-{'hrsh7th/cmp-buffer'}, 
-{'hrsh7th/cmp-path'},
-{'hrsh7th/cmp-cmdline'}, 
-{'hrsh7th/nvim-cmp'},
 --Mason
 -- LSP Package Manager
 		{
@@ -83,8 +89,30 @@ require("lazy").setup({
     tag = '0.1.8',
     dependencies = { 'nvim-lua/plenary.nvim' }
     },
---Null-ls
-    {'jose-elias-alvarez/null-ls.nvim'},
+--Autopairs
+ {'windwp/nvim-autopairs'},
+--Autotag
+ {'windwp/nvim-ts-autotag'},
+--Buffline
+{"akinsho/bufferline.nvim", dependencies = {'nvim-tree/nvim-web-devicons'}},
+--Comments
+{'terrortylor/nvim-comment'},
+--LuaLine
+{
+'nvim-lualine/lualine.nvim',
+dependencies = {
+'nvim-tree/nvim-web-devicons', 'linrongbin16/lsp-progress.nvim'
+}},
+--Outline
+{"hedyhli/outline.nvim"},
+--Toggleterm
+{'akinsho/toggleterm.nvim', version = "*", config = true},
+--
+
+
+
+
+
 },
   -- Configure any other settings here. See the documentation for more details.
   -- colorscheme that will be used when installing plugins.

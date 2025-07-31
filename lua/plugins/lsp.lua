@@ -1,5 +1,6 @@
 -- Sntup language servers.
 local lspconfig = require('lspconfig')
+local capabilities = require("cmp_nvim_lsp").default_capabilities()
 lspconfig.pyright.setup {}
 lspconfig.tsserver.setup {}
 lspconfig.prismals.setup {}
@@ -19,6 +20,16 @@ lspconfig.rust_analyzer.setup {
     },
   },
 }
+
+require("lspconfig")["clangd"].setup({
+	capabilities = capabilities,
+	on_attach = function(client, bufnr)
+		nvim.attach(client, bufnr)
+	end,
+})
+
+
+
 -- Global mappings.
 -- See `:help vim.diagnostic.*` for documentation on any of the below functions
 vim.keymap.set('n', '<leader>lD', vim.diagnostic.open_float)
